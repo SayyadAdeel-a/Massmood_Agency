@@ -1,0 +1,13 @@
+{
+  "name": "massmood-agency",
+  "version": "1.0.0",
+  "description": "Massmood Digital Marketing Agency Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
