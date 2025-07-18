@@ -1,4 +1,4 @@
-//*** Rutina de Validación de correo electrónico
+//*** Email validation routine
 
 function validaEmail() {
   let form = document.getElementById("form");
@@ -7,12 +7,12 @@ function validaEmail() {
   // var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   const pattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 
-  //*** Área de validación
+  //*** Validation area
   if (email.match(pattern)) {
     text.innerHTML = "";
     form.classList.add("valid");
     form.classList.remove("invalid");
-    text.innerHTML = "Su correo electrónico es correcto";
+    text.innerHTML = "Your email is correct";
     text.style.color = "#00ff15";
 
     setTimeout(() => {
@@ -24,7 +24,7 @@ function validaEmail() {
     text.innerHTML = "";
     form.classList.remove("valid");
     form.classList.add("invalid");
-    text.innerHTML = "Ingrese un correo electrónico válido";
+    text.innerHTML = "Please enter a valid email";
     text.style.color = "#fff";
 
     setTimeout(() => {
@@ -34,12 +34,12 @@ function validaEmail() {
     }, 15000);
   }
 
-  //*** validamos si el email viene vacio
+  //*** validate if email is empty
   if (email == "") {
     text.innerHTML = "";
     form.classList.remove("valid");
     form.classList.remove("invalid");
-    text.innerHTML = "¡Por favor, ingrese su correo electrónico!";
+    text.innerHTML = "Please enter your email!";
     text.style.color = "#fff";
 
     setTimeout(() => {
@@ -48,7 +48,7 @@ function validaEmail() {
   }
 }
 
-//*** validamos si pulsaron el botón sin colocar un correo
+//*** validate if button was pressed without entering an email
 function validarBoton() {
   let form = document.getElementById("form");
   let email = document.getElementById("email").value;
@@ -58,7 +58,7 @@ function validarBoton() {
     text.innerHTML = "";
     form.classList.remove("valid");
     form.classList.remove("invalid");
-    text.innerHTML = "¡Debe ingresar un correo electrónico!";
+    text.innerHTML = "You must enter an email!";
     text.style.color = "#fff";
 
     setTimeout(() => {
@@ -67,7 +67,7 @@ function validarBoton() {
     }, 15000);
   } else {
     if (email.match(pattern)) {
-      text.innerHTML = "¡Ha sido registrado correctamente!";
+      text.innerHTML = "You have been registered successfully!";
       text.style.color = "#00ff15";
 
       setTimeout(() => {
